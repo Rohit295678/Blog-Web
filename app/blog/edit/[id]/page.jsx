@@ -90,7 +90,7 @@ console.log(state)
     }
 
     if (newImage) {
-      const maxSize = 5 * 1024 * 1024; // 5MB in bytes
+      const maxSize = 5 * 1024 * 1024;
       if (newImage.size > maxSize) {
         setError("File size is too large. Please select a file under 5MB.");
         return;
@@ -101,6 +101,7 @@ console.log(state)
       setError("Title must be at least 4 characters long.");
       return;
     }
+    
 
     if (description.length < 20) {
       setError("Description must be at least 20 characters long.");
